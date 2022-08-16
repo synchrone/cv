@@ -5,27 +5,45 @@
 
 > [alex@syn.im](mailto:alex@syn.im?subject=Job%20Opportunity)
 
-> [github.com/synchrone](https://github.com/synchrone)
-
 ------
 
 ### Profile {#profile}
 
-Technology-non-bound engineer, looking for an infrastructure / platform challenge.
+My superpower is drilling deep into complicated systems and optimizing them as a whole. I care about the nitty-gritty and appreciate efficiency.
 
 ------
 
 ### Technical {#technical}
-1. Python
-2. Docker/Kubernetes
-3. AWS ([CFN](http://aws.amazon.com/cloudformation), [DynamoDB](http://aws.amazon.com/dynamodb), [SQS](http://aws.amazon.com/sqs))
+1. TypeScript
+2. GCP, AWS
+3. Infrastructure as Code
 1. PostgreSQL/PostGIS
-2. Continuous Delivery
-3. GCP ([BQ](https://cloud.google.com/bigquery/), BigTable, Dataflow)
+2. Kubernetes
+3. Continuous Delivery
 
 ------
 
 ### Experience {#experience}
+
+Staff Software Engineer at AirDeploy
+: *TypeScript, Postgres, NSQ, GCP, Fastly*
+  __January 2019 - May 2021__
+
+    * Taking over a production service in Python, optimizing for memory (profiling, uwsgi, k8s)
+    * Architecting a new service in TypeScript with an open-core OSS model
+    * Designing for low resource usage to handle a mostly-write API at 300 mbit/s
+    * NATS->NSQ migration, fully durable disk-backed message queues up to 100 GiB
+    * Event-driven Sever-Sent Events implementation
+
+Founder / CTO at [Honest & Rare](https://www.honest-rare.de)
+: *Business Case Engineering, Team Leadership*
+  __July 2019 - Present__
+ 
+    * Release Management
+    * Business Intelligence, Alerting and Reporting using MySQL/Postgres + [Metabase](https://www.metabase.com)
+    * End-to-End testing for business-critical paths on a brownfield project with Cypress
+    * Pragmatic and proven PHP, MySQL, nginx, AWS, Sentry, New Relic
+    * Scoring good Google Pagespeed/Lighthouse metrics for optimal conversion
 
 Senior Software Engineer at [Planet.com](https://www.planet.com)
 : *Kubernetes, Python, PostGIS, Google Cloud*
@@ -56,27 +74,19 @@ Tech Lead at [Home24 AG](http://home24.de)
     * Starting an acceptance testing project, providing QA with the architecture for transparency and testcase code reusage ([Codeception](http://codeception.com))
     * Major webshop checkout refactoring for testability and performance
 
-Senior Backend Developer at [Home24 GmbH](http://home24.de)
-: *PHP, MySQL, Apache Solr*
-  __October 2013 - November 2014__
-
-    * Optimizing a web e-commerce platform backend for runtime performance in a complex data environment
-    * Data denormalization over Solr for performance, search and faceting (custom Java data handlers)
-    * Bringing developer productivity tools for a big team (70 devs) to make recurring tasks efficient
-    * Internal 'git best practices' sessions, improving branching strategy, conducting git history investigations
-
-Fullstack Developer with [ER-Telecom ISP](http://domru.ru)
-: *PHP, MySQL, PostgreSQL, BitTorrent*
-__June 2008 - November 2012__
-
-    * Designed and implemented an advanced file sharing system. Cross-domain messaging, bulletproof  uploading  system,  BitTorrent-based, Highload  optimized; user ratings and self-moderation algorithms included.
-    * Created  a  2-tier  distributed  video-on-demand  delivery  system,  and a domain-specific content recommendation system.
-    * Online-gaming  services  maintenance;  developed  a  web-based  monitoring  system,  as  well  as championship management website
 
 ------
 
 
 ### Side and personal projects {#sideprojects}
+
+[Mix-O-Rama](http://mixorama.xyz) at [Founder Institute](http://fi.co)
+: *Startups, Business, Hardware Engineering*
+__November 2018 - March 2019__
+
+    * I made a working cocktail robot prototype, aiming to bring it to events market
+    * Pitching like there's no tomorrow. Lots of ideation, PoCs
+    * Steep learning curve, "do or die" program. High-quality networking with peers and mentors.
 
 Kubernetes consulting
 : *Kubernetes, AWS, OpenVPN, Apache Spark*
@@ -132,13 +142,6 @@ __July 2014 - December 2014__
     * Implementing XEP-0136 (Message Archive) support from scratch
     * Integrating XEP-0136 with mod_mam (XEP-0313) storage for compatibility
 
-The [Red Button](https://github.com/sovereign/killswitch) project
-: *Arduino/C*
-__October 2015__
-
-    * Implementing a programmable USB-keyboard emulating Big Button, emitting a shortcut
-    * UART-over-USB app-specific protocol implementation
-    * Storing programmed shortcuts in EEPROM energy-independent memory, with CRC consistency check
 
 ------
 
@@ -158,4 +161,4 @@ Microsoft Corp., Prometric
 
 ### Footer {#footer}
 
-Aleksandr Bogdanov -- [alex@syn.im](mailto:alex@syn.im?subject=Software%20Developer%20Job%20Opportunity) -- 2018
+Aleksandr Bogdanov -- [alex@syn.im](mailto:alex@syn.im?subject=Software%20Developer%20Job%20Opportunity) -- 2022

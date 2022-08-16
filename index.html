@@ -302,7 +302,7 @@ hr {
   display: block;
   position: relative;
   padding: 0;
-  margin: 10px auto;
+  margin: 25pt auto 10px;
   width: 100%;
   clear: both;
   border: none;
@@ -339,10 +339,14 @@ h2 {
 }
 h3 {
   margin: 0;
+  width: 25%;
   padding: 0 0 .5em;
   font-size: 150%;
   font-style: italic;
   font-weight: normal;
+}
+h3#technical {
+  float: left;
 }
 blockquote+hr {
   display: none;
@@ -397,8 +401,8 @@ ol li:nth-child(1) {
   border-top: none;
 }
 dl {
-  display: inline-block;
-  width: 75%;
+  clear: both;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -410,7 +414,6 @@ dl dt {
 dl dd {
   margin: 0 0 1.5em;
   padding: 0;
-  font-size: 80%;
   line-height: 1.4em;
 }
 dl dd ul {
@@ -481,7 +484,6 @@ body.pdf h2 {
 }
 body.pdf h3 {
   float: left;
-  width: 18%;
   font-style: normal;
 }
 body.pdf h3+p {
@@ -514,7 +516,7 @@ body.pdf ul dl dd {
 }
 body.pdf ol {
   float: left;
-  width: 82%;
+  width: 75%;
   margin: .7em 0 0;
 }
 body.pdf ol li {
@@ -548,9 +550,6 @@ body.pdf dl strong {
 body.pdf dl em {
   font-size: 130%;
   font-style: normal;
-}
-body.pdf #sideprojects {
-  margin-top: 150pt;
 }
 
 @media screen and (min-width: 15em) {
@@ -650,10 +649,6 @@ body.pdf #sideprojects {
     letter-spacing: 1px;
     font-weight: normal;
   }
-  h3 {
-    float: left;
-    width: 20%;
-  }
   h3+p {
     float: left;
     width: 84%;
@@ -728,27 +723,25 @@ body.pdf #sideprojects {
   <p><a href="cv%20aleksandr%20bogdanov.pdf">Download PDF</a></p>
   
   <p><a href="mailto:alex@syn.im?subject=Job%20Opportunity">alex@syn.im</a></p>
-  
-  <p><a target="_blank" href="https://github.com/synchrone">github.com/synchrone</a></p>
 </blockquote>
 
 <hr />
 
 <h3 id="profile">Profile</h3>
 
-<p>Technology-non-bound engineer, looking for an infrastructure / platform challenge.</p>
+<p>My superpower is drilling deep into complicated systems and optimizing them as a whole. I care about the nitty-gritty and appreciate efficiency.</p>
 
 <hr />
 
 <h3 id="technical">Technical</h3>
 
 <ol>
-<li>Python</li>
-<li>Docker/Kubernetes</li>
-<li>AWS (<a target="_blank" href="http://aws.amazon.com/cloudformation">CFN</a>, <a target="_blank" href="http://aws.amazon.com/dynamodb">DynamoDB</a>, <a target="_blank" href="http://aws.amazon.com/sqs">SQS</a>)</li>
+<li>TypeScript</li>
+<li>GCP, AWS</li>
+<li>Infrastructure as Code</li>
 <li>PostgreSQL/PostGIS</li>
+<li>Kubernetes</li>
 <li>Continuous Delivery</li>
-<li>GCP (<a target="_blank" href="https://cloud.google.com/bigquery/">BQ</a>, BigTable, Dataflow)</li>
 </ol>
 
 <hr />
@@ -756,6 +749,34 @@ body.pdf #sideprojects {
 <h3 id="experience">Experience</h3>
 
 <dl>
+<dt>Staff Software Engineer at AirDeploy</dt>
+<dd>
+<p><em>TypeScript, Postgres, NSQ, GCP, Fastly</em>
+<strong>January 2019 - May 2021</strong></p>
+
+<ul>
+<li>Taking over a production service in Python, optimizing for memory (profiling, uwsgi, k8s)</li>
+<li>Architecting a new service in TypeScript with an open-core OSS model</li>
+<li>Designing for low resource usage to handle a mostly-write API at 300 mbit/s</li>
+<li>NATS->NSQ migration, fully durable disk-backed message queues up to 100 GiB</li>
+<li>Event-driven Sever-Sent Events implementation</li>
+</ul>
+</dd>
+
+<dt>Founder / CTO at <a target="_blank" href="https://www.honest-rare.de">Honest &amp; Rare</a></dt>
+<dd>
+<p><em>Business Case Engineering, Team Leadership</em>
+<strong>July 2019 - Present</strong></p>
+
+<ul>
+<li>Release Management</li>
+<li>Business Intelligence, Alerting and Reporting using MySQL/Postgres + <a target="_blank" href="https://www.metabase.com">Metabase</a></li>
+<li>End-to-End testing for business-critical paths on a brownfield project with Cypress</li>
+<li>Pragmatic and proven PHP, MySQL, nginx, AWS, Sentry, New Relic</li>
+<li>Scoring good Google Pagespeed/Lighthouse metrics for optimal conversion</li>
+</ul>
+</dd>
+
 <dt>Senior Software Engineer at <a target="_blank" href="https://www.planet.com">Planet.com</a></dt>
 <dd>
 <p><em>Kubernetes, Python, PostGIS, Google Cloud</em>
@@ -796,31 +817,6 @@ body.pdf #sideprojects {
 <li>Major webshop checkout refactoring for testability and performance</li>
 </ul>
 </dd>
-
-<dt>Senior Backend Developer at <a target="_blank" href="http://home24.de">Home24 GmbH</a></dt>
-<dd>
-<p><em>PHP, MySQL, Apache Solr</em>
-<strong>October 2013 - November 2014</strong></p>
-
-<ul>
-<li>Optimizing a web e-commerce platform backend for runtime performance in a complex data environment</li>
-<li>Data denormalization over Solr for performance, search and faceting (custom Java data handlers)</li>
-<li>Bringing developer productivity tools for a big team (70 devs) to make recurring tasks efficient</li>
-<li>Internal &#8216;git best practices&#8217; sessions, improving branching strategy, conducting git history investigations</li>
-</ul>
-</dd>
-
-<dt>Fullstack Developer with <a target="_blank" href="http://domru.ru">ER-Telecom ISP</a></dt>
-<dd>
-<p><em>PHP, MySQL, PostgreSQL, BitTorrent</em>
-<strong>June 2008 - November 2012</strong></p>
-
-<ul>
-<li>Designed and implemented an advanced file sharing system. Cross-domain messaging, bulletproof  uploading  system,  BitTorrent-based, Highload  optimized; user ratings and self-moderation algorithms included.</li>
-<li>Created  a  2-tier  distributed  video-on-demand  delivery  system,  and a domain-specific content recommendation system.</li>
-<li>Online-gaming  services  maintenance;  developed  a  web-based  monitoring  system,  as  well  as championship management website</li>
-</ul>
-</dd>
 </dl>
 
 <hr />
@@ -828,6 +824,18 @@ body.pdf #sideprojects {
 <h3 id="sideprojects">Side and personal projects</h3>
 
 <dl>
+<dt><a target="_blank" href="http://mixorama.xyz">Mix-O-Rama</a> at <a target="_blank" href="http://fi.co">Founder Institute</a></dt>
+<dd>
+<p><em>Startups, Business, Hardware Engineering</em>
+<strong>November 2018 - March 2019</strong></p>
+
+<ul>
+<li>I made a working cocktail robot prototype, aiming to bring it to events market</li>
+<li>Pitching like there&#8217;s no tomorrow. Lots of ideation, PoCs</li>
+<li>Steep learning curve, &#8220;do or die&#8221; program. High-quality networking with peers and mentors.</li>
+</ul>
+</dd>
+
 <dt>Kubernetes consulting</dt>
 <dd>
 <p><em>Kubernetes, AWS, OpenVPN, Apache Spark</em>
@@ -910,18 +918,6 @@ body.pdf #sideprojects {
 <li>Integrating XEP-0136 with mod_mam (XEP-0313) storage for compatibility</li>
 </ul>
 </dd>
-
-<dt>The <a target="_blank" href="https://github.com/sovereign/killswitch">Red Button</a> project</dt>
-<dd>
-<p><em>Arduino/C</em>
-<strong>October 2015</strong></p>
-
-<ul>
-<li>Implementing a programmable USB-keyboard emulating Big Button, emitting a shortcut</li>
-<li>UART-over-USB app-specific protocol implementation</li>
-<li>Storing programmed shortcuts in EEPROM energy-independent memory, with CRC consistency check</li>
-</ul>
-</dd>
 </dl>
 
 <hr />
@@ -945,7 +941,7 @@ Windows Development Fundamentals
 
 <h3 id="footer">Footer</h3>
 
-<p>Aleksandr Bogdanov &#8212; <a href="mailto:alex@syn.im?subject=Software%20Developer%20Job%20Opportunity">alex@syn.im</a> &#8212; 2018</p>
+<p>Aleksandr Bogdanov &#8212; <a href="mailto:alex@syn.im?subject=Software%20Developer%20Job%20Opportunity">alex@syn.im</a> &#8212; 2022</p>
 
     </div>
 </div>

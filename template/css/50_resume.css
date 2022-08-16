@@ -73,7 +73,7 @@ hr {
     display: block;
     position: relative;
     padding: 0;
-    margin: 10px auto;
+    margin: 25pt auto 10px ;
     width: 100%;
     clear: both;
     border: none;
@@ -93,7 +93,7 @@ h1 {
     background: @headerBackground;
     border-top: 5px solid #333333;
     color: #FFFFFF;
-    
+
     -webkit-border-top-left-radius: 5px;
     -webkit-border-top-right-radius: 5px;
     -moz-border-radius-topleft: 5px;
@@ -114,10 +114,14 @@ h2 {
 
 h3 {
     margin: 0;
+    width: 25%;
     padding: 0 0 .5em;
     font-size: 150%;
     font-style: italic;
     font-weight: normal;
+}
+h3#technical {
+    float: left;
 }
 
 blockquote+hr {
@@ -179,8 +183,8 @@ ol li:nth-child(1) {
 }
 
 dl {
-    display: inline-block;
-    width: 75%;
+    clear: both;
+    width: 100%;
     margin: 0;
     padding: 0;
     dt {
@@ -191,7 +195,7 @@ dl {
     dd {
         margin: 0 0 1.5em;
         padding: 0;
-        font-size: 80%;
+        /*font-size: 80%;*/
         line-height: 1.4em;
 
         ul {
@@ -213,7 +217,7 @@ dl {
         margin: .15em 0 .5em;
         font-style: bold;
     }
-    
+
 }
 
 

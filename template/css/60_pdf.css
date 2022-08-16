@@ -1,7 +1,7 @@
 body.pdf {
     color: black;
     background: none;
-    
+
     a {
         text-decoration: none;
         color: black;
@@ -15,11 +15,11 @@ body.pdf {
         border-width: 8px 0 2px 0;
         text-align: left;
     }
-    
+
     .resume {
         position:relative;
         padding: 0 80px;
-        
+
         -webkit-box-shadow: none;
         box-shadow: none;
     }
@@ -43,7 +43,6 @@ body.pdf {
     }
     h3 {
         float: left;
-        width: 18%;
         font-style: normal;
     }
     h3+p {
@@ -59,7 +58,7 @@ body.pdf {
     blockquote a {
         color: #F7F2C7;
     }
-    
+
     ul li {
         width: 28%;
         float: left;
@@ -79,7 +78,7 @@ body.pdf {
 
     ol {
         float: left;
-        width: 82%;
+        width: 75%;
         margin: .7em 0 0;
     }
 
@@ -93,7 +92,7 @@ body.pdf {
     ol li:nth-child(1), ol li:nth-child(2), ol li:nth-child(3) {
         border-top: none;
     }
-    
+
     dl {
         margin: .7em 0 0;
         dt {
@@ -117,10 +116,6 @@ body.pdf {
             font-size: 130%;
             font-style: normal;
         }
-        
-    }
 
-    #sideprojects {
-        margin-top: 150pt;
     }
 }
