@@ -60,13 +60,13 @@ Senior Software Engineer at [Planet.com](https://www.planet.com)
     * Delivered an Internal Analytics app (BigQuery/Datastudio)
     * Handled 200 Billing API requests per second (uwsgi, postgres locks/transactions)
     * Implemented Continuous Delivery
-    * Migrating from Amazon Web Services to Google Cloud Platform (SQS, RDS, Docker)
+    * Migrated from Amazon Web Services to Google Cloud Platform (SQS, RDS, Docker)
 
 Cloud Platform Lead at [LOVOO GmbH](http://lovoo.com)
 : *Kubernetes, CoreOS, Go, Advanced AWS & GCP*
   __April 2016 - December 2016__
 
-    * Deployed a slew of microservices in Golang to a distributed Kubernetes cluster, optimized to handle 1.5 Gbit/s of API traffic
+    * Deployed a slew of microservices in Golang to Kubernetes, optimized to handle 1.5 Gbit/s of API traffic
     * Provided a Platform as a Service environment for the internal teams
     * Automated deployments, canary releases and traffic shifting for blue\green
     * Evaluated and compared cloud vendor offers from functional and price/performance standpoints 
