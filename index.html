@@ -302,7 +302,7 @@ hr {
   display: block;
   position: relative;
   padding: 0;
-  margin: 25pt auto 10px;
+  margin: 0 auto 10px;
   width: 100%;
   clear: both;
   border: none;
@@ -339,7 +339,7 @@ h2 {
 }
 h3 {
   margin: 0;
-  width: 25%;
+  width: 50%;
   padding: 0 0 .5em;
   font-size: 150%;
   font-style: italic;
@@ -347,6 +347,7 @@ h3 {
 }
 h3#technical {
   float: left;
+  width: 25%;
 }
 blockquote+hr {
   display: none;
@@ -357,6 +358,10 @@ h3+p {
   display: block;
   font-size: 104%;
   line-height: 24px;
+}
+h3#sideprojects+p {
+  clear: both;
+  width: 100%;
 }
 ul {
   margin: 0;
@@ -371,6 +376,7 @@ ul dl {
   margin: .3em 0 0;
   padding: 0;
   width: 100%;
+  font-style: normal;
 }
 ul dl dt {
   font-size: 100%;
@@ -403,7 +409,7 @@ ol li:nth-child(1) {
 dl {
   clear: both;
   width: 100%;
-  margin: 0;
+  margin: 0 0 2em;
   padding: 0;
 }
 dl dt {
@@ -483,12 +489,15 @@ body.pdf h2 {
   font-weight: normal;
 }
 body.pdf h3 {
-  float: left;
+  margin: 25px 0 10px;
   font-style: normal;
 }
 body.pdf h3+p {
-  float: left;
   width: 82%;
+}
+body.pdf h3#sideprojects+p {
+  clear: both;
+  width: 100%;
 }
 body.pdf blockquote {
   top: 45px;
@@ -552,7 +561,7 @@ body.pdf dl em {
   font-style: normal;
 }
 
-@media screen and (min-width: 15em) {
+@media all and (min-width: 15em) {
   h1 {
     padding: 40px 0 0 40px;
   }
@@ -569,7 +578,7 @@ body.pdf dl em {
     padding: 10px;
   }
 }
-@media screen and (min-width: 30em) {
+@media all and (min-width: 30em) {
   h1 {
     margin: -40px -50px 0;
     padding: 40px 0 0 40px;
@@ -594,7 +603,7 @@ body.pdf dl em {
     margin-top: -50px;
   }
 }
-@media screen and (min-width: 37.5em) {
+@media all and (min-width: 37.5em) {
   body {
     padding: 0 0;
   }
@@ -627,7 +636,7 @@ body.pdf dl em {
     margin-top: -10px;
   }
 }
-@media screen and (min-width: 57em) {
+@media all and (min-width: 57em) {
   .container {
     width: 912px;
   }
@@ -682,9 +691,6 @@ body.pdf dl em {
   ol li:nth-child(3) {
     border-top: none;
   }
-  dl {
-    margin: .5em 0 0;
-  }
   dl strong {
     float: right;
     margin-top: -2em;
@@ -711,7 +717,7 @@ body.pdf dl em {
 </style>
 </head>
 
-<body class="">
+<body>
 
 <div class="container">
     <div class="resume">
@@ -729,9 +735,7 @@ body.pdf dl em {
 
 <h3 id="profile">Profile</h3>
 
-<p>My superpower is drilling deep into complicated systems and optimizing them as a whole. I care about the nitty-gritty and appreciate efficiency.</p>
-
-<hr />
+<p>My superpower is drilling deep into complicated systems and optimizing them as a whole. I care about the details and appreciate efficiency.</p>
 
 <h3 id="technical">Technical</h3>
 
@@ -746,34 +750,46 @@ body.pdf dl em {
 
 <hr />
 
-<h3 id="experience">Experience</h3>
+<h3 id="employment">Employment</h3>
 
 <dl>
-<dt>Staff Software Engineer at AirDeploy</dt>
-<dd>
-<p><em>TypeScript, Postgres, NSQ, GCP, Fastly</em>
-<strong>January 2019 - May 2021</strong></p>
-
-<ul>
-<li>Taking over a production service in Python, optimizing for memory (profiling, uwsgi, k8s)</li>
-<li>Architecting a new service in TypeScript with an open-core OSS model</li>
-<li>Designing for low resource usage to handle a mostly-write API at 300 mbit/s</li>
-<li>NATS->NSQ migration, fully durable disk-backed message queues up to 100 GiB</li>
-<li>Event-driven Sever-Sent Events implementation</li>
-</ul>
-</dd>
-
 <dt>Founder / CTO at <a target="_blank" href="https://www.honest-rare.de">Honest &amp; Rare</a></dt>
 <dd>
 <p><em>Business Case Engineering, Team Leadership</em>
 <strong>July 2019 - Present</strong></p>
 
 <ul>
-<li>Release Management</li>
-<li>Business Intelligence, Alerting and Reporting using MySQL/Postgres + <a target="_blank" href="https://www.metabase.com">Metabase</a></li>
-<li>End-to-End testing for business-critical paths on a brownfield project with Cypress</li>
-<li>Pragmatic and proven PHP, MySQL, nginx, AWS, Sentry, New Relic</li>
-<li>Scoring good Google Pagespeed/Lighthouse metrics for optimal conversion</li>
+<li>Hired 3 developers and made a marketplace with 350 companies and 3500 products for 5000+ customers </li>
+<li>Organized a Continuous Delivery pipeline</li>
+<li>Implemented Business Intelligence reporting dashboards and alerting with MySQL/Postgres + Metabase</li>
+<li>Planned and implemented an End-to-End testing suite using Cypress</li>
+<li>Optimized performance 10x across the entire stack from DB to CDN </li>
+</ul>
+</dd>
+
+<dt>Staff Software Engineer at AirDeploy</dt>
+<dd>
+<p><em>TypeScript, Postgres, NATS/NSQ, GCP, Fastly</em>
+<strong>January 2019 - May 2021</strong></p>
+
+<ul>
+<li>Architected a new service in TypeScript with an open-core OSS model</li>
+<li>Sustained up to 300 Mbit/s of mostly-write API requests with it</li>
+<li>Planned and implemented a migration of message queues that do not fit in RAM to NSQ </li>
+<li>Made sure Sever-Sent Events have low latency</li>
+</ul>
+</dd>
+
+<dt>Creator of <a target="_blank" href="http://mixorama.xyz">Mix-O-Rama</a> in <a target="_blank" href="http://fi.co">Founder Institute</a></dt>
+<dd>
+<p><em>Startups, Business, Hardware Engineering</em>
+<strong>October 2018 - March 2019</strong></p>
+
+<ul>
+<li>Built a working cocktail robot prototype, aiming to bring it to events market</li>
+<li>Python + Kivy UI + Arduino/C + HX711 sensors + pneumatics</li>
+<li>Designed and assembled a custom PCB and 3D printed parts</li>
+<li>Served over 500 cocktails at several parties for market validation</li>
 </ul>
 </dd>
 
@@ -783,11 +799,11 @@ body.pdf dl em {
 <strong>February 2017 - September 2018</strong></p>
 
 <ul>
-<li>Implementing platform permissions system to serve satellite imagery (Flask, SQLAlchemy, GDAL)</li>
-<li>Billing engine, enforcing area download quotas (Bottle, low-level PostGIS)</li>
-<li><a target="_blank" href="https://cloud.google.com/bigquery/">BigQuery</a>-based Internal Analytics app (<a target="_blank" href="https://www.google.com/analytics/data-studio/">Google Datastudio</a> as a UI)</li>
-<li>Handling 200 Billing API requests per second (uwsgi, postgres locks/transactions)</li>
-<li>Fully automated Delivery pipeline</li>
+<li>Implemented a platform permissions system to serve satellite imagery (Flask, SQLAlchemy, GDAL)</li>
+<li>Enforced area download quotas (Bottle, low-level PostGIS)</li>
+<li>Delivered an Internal Analytics app (BigQuery/Datastudio)</li>
+<li>Handled 200 Billing API requests per second (uwsgi, postgres locks/transactions)</li>
+<li>Implemented Continuous Delivery</li>
 <li>Migrating from Amazon Web Services to Google Cloud Platform (SQS, RDS, Docker)</li>
 </ul>
 </dd>
@@ -798,10 +814,10 @@ body.pdf dl em {
 <strong>April 2016 - December 2016</strong></p>
 
 <ul>
-<li>Deploying a slew of microservices in Golang to a distributed Kubernetes cluster, optimized to handle 1.5 Gbit/s of API traffic</li>
-<li>Internal Platform as a Service for the teams</li>
-<li>Fully automated deployments, canary releases, traffic shifting for blue\green</li>
-<li>Evaluating and benchmarking cloud providers for an optimal solution</li>
+<li>Deployed a slew of microservices in Golang to a distributed Kubernetes cluster, optimized to handle 1.5 Gbit/s of API traffic</li>
+<li>Provided a Platform as a Service environment for the internal teams</li>
+<li>Automated deployments, canary releases and traffic shifting for blue\green</li>
+<li>Evaluated and compared cloud vendor offers from functional and price/performance standpoints </li>
 </ul>
 </dd>
 
@@ -811,114 +827,25 @@ body.pdf dl em {
 <strong>November 2014 - April 2016</strong></p>
 
 <ul>
-<li>Logistic calculations project, handling millions of entries (migrated <a target="_blank" href="https://www.rabbitmq.com/">RabbitMQ</a> to <a target="_blank" href="http://aws.amazon.com/sqs">SQS</a>)</li>
-<li>Massive 3rd party product data import re-architecture (<a target="_blank" href="http://aws.amazon.com/sqs">SQS</a>, <a target="_blank" href="http://aws.amazon.com/dynamodb">DynamoDB</a>, optimistic locking, Streaming XML)</li>
-<li>Starting an acceptance testing project, providing QA with the architecture for transparency and testcase code reusage (<a target="_blank" href="http://codeception.com">Codeception</a>)</li>
-<li>Major webshop checkout refactoring for testability and performance</li>
+<li>Implemented Logistic calculations, handling millions of entries (migrated <a target="_blank" href="https://www.rabbitmq.com/">RabbitMQ</a> to <a target="_blank" href="http://aws.amazon.com/sqs">SQS</a>)</li>
+<li>Re-architected a 3rd party product data import system (<a target="_blank" href="http://aws.amazon.com/sqs">SQS</a>, <a target="_blank" href="http://aws.amazon.com/dynamodb">DynamoDB</a>, optimistic locking, Streaming XML)</li>
+<li>Started an acceptance testing project, providing QA with the architecture for transparency and testcase code reusage (<a target="_blank" href="http://codeception.com">Codeception</a>)</li>
+<li>Refactored a critical web checkout process for testability and performance</li>
 </ul>
 </dd>
 </dl>
 
 <hr />
 
-<h3 id="sideprojects">Side and personal projects</h3>
+<h3 id="sideprojects">Personal projects</h3>
 
-<dl>
-<dt><a target="_blank" href="http://mixorama.xyz">Mix-O-Rama</a> at <a target="_blank" href="http://fi.co">Founder Institute</a></dt>
-<dd>
-<p><em>Startups, Business, Hardware Engineering</em>
-<strong>November 2018 - March 2019</strong></p>
+<p>Over the years I worked with too many tech stacks. Some of them I no longer actively use, but I carried valuable experience out of all of them.
+I genuinely enjoy untangling complex systems, debugging and optimizing them.</p>
 
-<ul>
-<li>I made a working cocktail robot prototype, aiming to bring it to events market</li>
-<li>Pitching like there&#8217;s no tomorrow. Lots of ideation, PoCs</li>
-<li>Steep learning curve, &#8220;do or die&#8221; program. High-quality networking with peers and mentors.</li>
-</ul>
-</dd>
+<p>Here&#8217;s a list of keywords that I would love to tell developer battle stories about:</p>
 
-<dt>Kubernetes consulting</dt>
-<dd>
-<p><em>Kubernetes, AWS, OpenVPN, Apache Spark</em>
-<strong>May 2018</strong></p>
-
-<ul>
-<li>Implementing a PoC of K8S deployment for a client</li>
-<li>Persistent volumes provisioning</li>
-<li>Implementing a debug-on-cluster approach with IntelliJ IDEA, keeping HDFS in the cloud</li>
-</ul>
-</dd>
-
-<dt>OSS Contributions to <a target="_blank" href="https://cloudron.io/">Cloudron</a></dt>
-<dd>
-<p><em><a target="_blank" href="http://terraform.io/">Terraform</a>, NodeJS, Google Cloud Platform</em>
-<strong>September 2017, December 2017</strong></p>
-
-<ul>
-<li>Fully functional app <a target="_blank" href="https://github.com/synchrone/cloudron-provisioning">deployment for both AWS and GCP</a> </li>
-<li>Implemented Google Cloud Storage backup driver from scratch</li>
-<li>Implemented Google Cloud DNS driver from scratch</li>
-</ul>
-</dd>
-
-<dt><a target="_blank" href="https://apps.sandstorm.io/app/8kr4rvyrggvzfvc160htzdt4u5rfvjc2dgdn27n5pt66mxa40m1h">Calendars and Contacts</a> app</dt>
-<dd>
-<p><em>Python 3, Javascript, <a target="_blank" href="https://sandstorm.io">Sandstorm.io</a></em>
-<strong>February 2016</strong></p>
-
-<ul>
-<li>Forked open source applications to provide an integrated solution for personal cloud and security sandbox platform</li>
-<li>Implementing CalDAV and CardDAV protocols, ensuring various client compatibility</li>
-<li>Contributing to sandstorm.io, working together with core developers in an open-source fashion</li>
-<li>Setting up acceptance test suite based on Apple&#8217;s CalDAV server tools</li>
-</ul>
-</dd>
-
-<dt><a target="_blank" href="https://github.com/sourcestream/highcore-api">Highcore project</a></dt>
-<dd>
-<p><em>Ansible, Sensu, Graphite/Grafana, AWS/CFN, AWS/SQS</em>
-<strong>May 2015 - July 2015</strong></p>
-
-<ul>
-<li>Designed a workflow, enabling action traceability and issuer accountability</li>
-<li>Implemented parts of API backend, integrating AWS CloudFormation functionality with Sparkle template generator and Git</li>
-<li>Implemented a scalable metric gathering server, irrespective of the source (app/service/node)
-
-<ul>
-<li>Metric-state-based alerting functionality</li>
-<li>Dashboards with actionable metric insights</li>
-</ul></li>
-<li>Implemented a flexible monitoring stack functionality, optimized for Cloud use
-
-<ul>
-<li>Fully dynamic host (de-)registration</li>
-</ul></li>
-</ul>
-</dd>
-
-<dt>Contributions to <a target="_blank" href="https://github.com/sovereign/sovereign">Sovereign</a></dt>
-<dd>
-<p><em>Ansible, Bash</em>
-<strong>August 2015, December 2014</strong></p>
-
-<ul>
-<li>Contributing to a set of tools for deploying a personal cloud</li>
-<li>ownCloud automatic configuration</li>
-<li>Roudcube automatic configuration; CardDAV plugin ownCloud integration</li>
-<li>ownCloud XMPP integration</li>
-</ul>
-</dd>
-
-<dt>Contributions to <a target="_blank" href="https://prosody.im">Prosody.im</a></dt>
-<dd>
-<p><em>XMPP\Jabber, Lua language, PostgreSQL</em>
-<strong>July 2014 - December 2014</strong></p>
-
-<ul>
-<li>Implementing XEP-0136 (Message Archive) support from scratch</li>
-<li>Integrating XEP-0136 with mod_mam (XEP-0313) storage for compatibility</li>
-</ul>
-</dd>
-</dl>
+<pre><code>Kotlin, Graphite, Grafana, Ansible, Terraform, NATS-Streaming, Apache Spark, Apache Solr, Lua, Prosody, SQLite, XMPP, Sandstorm, Cloudron, C#, ASP.NET, MSSQL, WinForms, CalDAV, CardDAV, SkypeKit, BitTorrent, C, Arduino, Reverse Engineering, Bluetooth
+</code></pre>
 
 <hr />
 
@@ -930,7 +857,7 @@ body.pdf dl em {
 <strong>2008-2013</strong></dd>
 
 <dt>Zend Technologies Ltd.</dt>
-<dd><a target="_blank" href="http://www.zend.com/en/store/education/certification/yellow-pages.php#show-ClientCandidateID=ZEND017736">PHP 5.3 Certified Engineer</a>
+<dd>PHP Certified Engineer
 <strong>2011</strong></dd>
 
 <dt>Microsoft Corp., Prometric</dt>

@@ -42,12 +42,15 @@ body.pdf {
         font-weight: normal;
     }
     h3 {
-        float: left;
+        margin: 25px 0 10px;
         font-style: normal;
     }
     h3+p {
-        float: left;
         width: 82%;
+    }
+    h3#sideprojects+p{
+        clear: both;
+        width: 100%;
     }
 
     blockquote {
@@ -95,8 +98,6 @@ body.pdf {
 
     dl {
         margin: .7em 0 0;
-        dt {
-        }
         dd {
             ul {
                 margin-left: 20px;

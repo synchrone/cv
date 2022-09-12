@@ -6,7 +6,7 @@
   Zoomed out below 320 px
 */
 
-@media screen and (min-width: 15em) {
+@media all and (min-width: 15em) {
     h1 {
         padding: 40px 0 0 40px;
     }
@@ -31,7 +31,7 @@
   Zoomed in above 480 px
 */
 
-@media screen and (min-width: 30em) {
+@media all and (min-width: 30em) {
 
     h1 {
         margin: -40px -50px 0;
@@ -65,7 +65,7 @@
   Zoomed in above 600 px
 */
 
-@media screen and (min-width: 37.5em) {
+@media all and (min-width: 37.5em) {
     body {
         padding: 0 0;
     }
@@ -106,7 +106,7 @@
   Zoomed in above 912 px
 */
 
-@media screen and (min-width: 57em) {
+@media all and (min-width: 57em) {
     .container {
         width: 912px;
     }
@@ -170,11 +170,6 @@
     }
 
     dl {
-        margin: .5em 0 0;
-        dt {
-        }
-        dd {
-        }
         strong {
             float: right;
             margin-top: -2em;
@@ -183,7 +178,6 @@
             font-size: 130%;
             font-style: normal;
         }
-
     }
 
 
@@ -201,17 +195,5 @@
         font-family: sans-serif;
         font-weight: 100;
     }
-
-}
-
-
-/*
-  Huge-screen layout
-  1888-2520 px
-  Zoomed in above 1920 px
-*/
-
-@media screen and (min-width: 118em) {
-
 
 }
